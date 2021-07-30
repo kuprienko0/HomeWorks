@@ -21,6 +21,7 @@ console.log('--------task 2--------');
 ascii('ABC');
 ascii('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
+
 alienLanguage = (str) =>{
     let sentence = str.toUpperCase();
     sentence = sentence.split(' ').map((e) =>{
@@ -32,3 +33,14 @@ alienLanguage = (str) =>{
 }
 console.log('--------task 3--------');
 alienLanguage('My name is John');
+
+
+automorphic = (num) =>{
+    let last = num.toString().split('').reverse().slice(0,1);
+    let pow = Math.pow(num,2);
+    return pow.toString().endsWith(last);
+}
+console.log('--------task 4--------');
+console.log(automorphic(1));
+console.log(automorphic(3));
+console.log(automorphic(10));
