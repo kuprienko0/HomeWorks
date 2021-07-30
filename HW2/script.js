@@ -10,9 +10,13 @@ fiveLines(2);
 
 ascii = (str) =>{
     let total1 = str.split('');
-    total1 = total1.map((e)=> e.charCodeAt(0)).join('').split('');
+    total1 = total1.map((e)=>
+        e.charCodeAt(0))
+        .join('')
+        .split('');
     let total2 = total1.map((e)=> (e === '7') ? e = '1' : e);
-    const rez = total1.reduce((prev, next) => Number(prev) + Number(next)) - total2.reduce((prev, next) => Number(prev) + Number(next));
+    const rez = total1.reduce((prev, next) => Number(prev) + Number(next))
+              - total2.reduce((prev, next) => Number(prev) + Number(next));
     console.log(total1);
     console.log(total2);
     console.log(rez);
@@ -34,6 +38,18 @@ alienLanguage = (str) =>{
 console.log('--------task 3--------');
 alienLanguage('My name is John');
 
+
+alienLanguage1 = (str) =>{
+    let sentence = str.toUpperCase();
+    sentence = sentence.split(' ').map((e) =>{
+        const lettersArr = e.split('');
+        const word1 = `${lettersArr.splice(0, lettersArr.length - 1)}${lettersArr.splice(-1).toString().toLowerCase()}`.replace(/,/g, '');
+        return  word1;
+    })
+    console.log(sentence.join(' '));
+}
+console.log('--------task 3.1--------');
+alienLanguage1('My name is John');
 
 automorphic = (num) =>{
     let last = num.toString().split('').reverse().slice(0,1);
