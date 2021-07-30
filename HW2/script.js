@@ -21,3 +21,14 @@ console.log('--------task 2--------');
 ascii('ABC');
 ascii('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
+alienLanguage = (str) =>{
+    let sentence = str.toUpperCase();
+    sentence = sentence.split(' ').map((e) =>{
+        let reverse = e.split('').reverse().join('');
+        reverse = reverse.substring(1).split('').reverse().join('') + reverse.charAt(0).toLowerCase();
+        return  reverse;
+    })
+    console.log(sentence.join(' '));
+}
+console.log('--------task 3--------');
+alienLanguage('My name is John');
