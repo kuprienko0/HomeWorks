@@ -44,3 +44,23 @@ console.log('--------task 4--------');
 console.log(automorphic(1));
 console.log(automorphic(3));
 console.log(automorphic(10));
+
+
+console.log('--------task 5--------');
+Function.prototype.call = function(context, ...arguments) {
+    this.apply(context, arguments);
+}
+
+
+var name;
+var greet_abe = function() {
+    name = 'Abe';
+    return "Hello, " + name + '!';
+};
+var greet_ben = function() {
+    name = 'Ben';
+    return "Hello, " + name + '!';
+};
+console.log('--------task 8--------');
+console.log(greet_abe());
+console.log(greet_ben());
